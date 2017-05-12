@@ -1,9 +1,10 @@
-print("Сейчас будут решена функция:")
-print("y = sh(x)*tg(x+1)-tg^2(2+sh(x-1))")
-print("Где sh(x) = (e^x-e^-x)/2")
-x=float(input("Введите аргумент x: "))
 import math
-sh=(math.exp(x)+math.exp(-x))/2
-print("Sh(x) = ",sh)
-y=sh*math.tan(math.radians(x)+1)-math.pow(math.tan(2+((math.exp(x-1)+math.exp(-x-1))/2)),2)
-print("Функция y = ",y)
+print('Сейчас будет решено выражение:')
+print('N = (z+(z*x)^(1/5))^(1/5))/e^x+a^5*arctg(x)')
+z = float(input('Введите переменную z: '))
+e = float(input('Введите переменную e: '))
+x = float(input('Введите переменную x: '))
+a = float(input('Введите переменную a: '))
+sqrz=z+math.sqrt(z*x)
+n=math.pow(sqrz,1/5)/(math.exp(x)+math.pow(a,5)*math.atan(math.radians(x)))
+print('Ответ:',n)
